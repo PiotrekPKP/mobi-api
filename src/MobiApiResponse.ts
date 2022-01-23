@@ -1,9 +1,10 @@
 export interface MobiAPIResponse {
-  user: User;
-  templates: Templates;
+  user: MobiAPIResponseUser;
+  templates?: MobiAPIResponseTemplates;
+  error?: null;
 }
 
-export interface Templates {
+export interface MobiAPIResponseTemplates {
   js: string;
   css: string;
   nav: string;
@@ -37,16 +38,23 @@ export interface Templates {
   "frekwencja?typ=statystyka": string;
 }
 
-export interface User {
-  email: string;
-  school_year: string;
-  id_global: string;
-  login: string;
-  sync_url: string;
+export interface MobiAPIResponseUser {
+  email: string | null;
+  school_year?: string;
+  id_global?: string;
+  login?: string;
+  sync_url?: string;
+  type?: string;
+  main?: string;
+  auth_key: string | null;
+  change_password?: boolean;
+  password_hash?: string;
+  password?: string;
+}
+
+export interface MobiAPIResponseError {
   type: string;
-  main: string;
-  auth_key: string;
-  change_password: boolean;
-  password_hash: string;
-  password: string;
+  unauthorized: boolean;
+  logout: boolean;
+  message: string;
 }
