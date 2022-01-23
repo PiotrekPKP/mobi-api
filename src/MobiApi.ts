@@ -11,7 +11,7 @@ export default class MobiApi {
   private password?: string;
 
   constructor(apiUrl: string) {
-    this.apiUrl = apiUrl;
+    this.apiUrl = `${apiUrl}/api2`;
   }
 
   sync = async () => {
