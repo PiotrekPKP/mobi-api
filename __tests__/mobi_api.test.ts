@@ -8,5 +8,8 @@ test("Developement", async () => {
     process.env.TEST_PASSWORD ?? ""
   );
 
+  const messages = await mobiApi.getRecievedMessages();
+  console.log(messages);
+
   expect(true).toBe(true);
 });
