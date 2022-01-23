@@ -1,6 +1,6 @@
 {
   "name": "mobi-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mobidziennik API for JavaScript & TypeScript",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
